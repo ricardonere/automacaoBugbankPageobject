@@ -6,15 +6,19 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage {
     WebDriver driver ;
+    String REGISTRAR = "//button[contains(text(),'Registrar')]";
     String EMAIL = "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[2]/form[1]/div[2]/input[1]";
+
     String NOME = "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[2]/form[1]/div[3]/input[1]";
     String SENHA = "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[2]/form[1]/div[4]/div[1]/input[1]";
     String CONFIRM_SENHA = "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[2]/form[1]/div[5]/div[1]/input[1]";
     String CRIAR_CONTA = "//label[@id='toggleAddBalance']";
     String CADASTRAR = "//button[contains(text(),'Cadastrar')]";
 
-    String REGISTRAR = "//button[contains(text(),'Registrar')]";
 
+    public void registrar() {
+        driver.findElement(By.xpath(REGISTRAR)).click();
+    }
     public HomePage(WebDriver driverParametro) {
         this.driver = driverParametro;
 
@@ -44,7 +48,5 @@ public class HomePage {
         driver.findElement(By.xpath(CADASTRAR)).click();
     }
 
-    public void registrar() {
-        driver.findElement(By.xpath(REGISTRAR)).click();
+
     }
-}

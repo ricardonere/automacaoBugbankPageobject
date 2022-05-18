@@ -21,13 +21,14 @@ public class TesteCadastramento {
     }
     @Test
     public void testePositivoCadastro(){
+        homePage.registrar();
         homePage.preencherEmail();
         homePage.preencherNome();
         homePage.preencherSenha();
         homePage.preencheConfirmaSenha();
         homePage.criarConta();
         homePage.cadastrar();
-        homePage.registrar();
+
     }
     @After
     public void finalizar() throws InterruptedException {
