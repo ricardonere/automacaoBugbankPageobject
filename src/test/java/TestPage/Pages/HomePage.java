@@ -24,20 +24,20 @@ public class HomePage {
 
     }
 
-    public void preencherEmail() {
-        driver.findElement(By.xpath(EMAIL)).sendKeys("teste@gmail.com");
+    public void preencherEmail(String email) {
+        driver.findElement(By.xpath(EMAIL)).sendKeys(email);
     }
 
-    public void preencherNome() {
-        driver.findElement(By.xpath(NOME)).sendKeys("Ricardo");
+    public void preencherNome(String nome) {
+        driver.findElement(By.xpath(NOME)).sendKeys(nome);
     }
 
-    public void preencherSenha() {
-        driver.findElement(By.xpath(SENHA)).sendKeys("Teste");
+    public void preencherSenha(String senha) {
+        driver.findElement(By.xpath(SENHA)).sendKeys(senha);
     }
 
-    public void preencheConfirmaSenha() {
-        driver.findElement(By.xpath(CONFIRM_SENHA)).sendKeys("Teste");
+    public void preencheConfirmaSenha(String confirmaSenha) {
+        driver.findElement(By.xpath(CONFIRM_SENHA)).sendKeys(confirmaSenha);
     }
 
     public void criarConta() {
