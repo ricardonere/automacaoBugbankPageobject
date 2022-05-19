@@ -30,20 +30,24 @@ public class TesteLogin {
 
     @Test
     public void testeLoginComSucesso() {
+        String msgValidacao = "bem vindo ao BugBank :)";
         loginPageJava.preencherEmail(email);
         loginPageJava.preencherSenha(senha);
         loginPageJava.clicarAcessar();
-        validarCriacaoUsuario();
+        validarCriacaoUsuario(msgValidacao);
+        validarUrl("/home");
         CadastrarUsuario();
     }
-
+    public void validarUrl(String pagina) {
+        Assert.assertTrue(driver.getCurrentUrl().contains(pagina));
+    }
     @After
     public void finalizar() throws InterruptedException {
         Thread.sleep(5000);
         driver.quit();
     }
 
-    public void validarCriacaoUsuario() {
+    public void validarCriacaoUsuario(String msgValidacao) {
         Assert.assertTrue(driver.getPageSource().contains("foi criada com sucesso"));
 
     }
