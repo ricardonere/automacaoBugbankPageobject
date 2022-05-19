@@ -13,8 +13,8 @@ public class HomePage {
     String SENHA = "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[2]/form[1]/div[4]/div[1]/input[1]";
     String CONFIRM_SENHA = "//body/div[@id='__next']/div[1]/div[2]/div[1]/div[2]/form[1]/div[5]/div[1]/input[1]";
     String CRIAR_CONTA = "//label[@id='toggleAddBalance']";
-    String CADASTRAR = "//button[contains(text(),'Cadastrar')]";
-
+    String CADASTRAR = "//a[contains(text(),'Cadastrar')]";
+    String FECHAR = "//button[contains(text(),'Fechar')]";
 
     public void registrar() {
         driver.findElement(By.xpath(REGISTRAR)).click();
@@ -48,5 +48,7 @@ public class HomePage {
         driver.findElement(By.xpath(CADASTRAR)).click();
     }
 
-
+    public void fechar() {
+        driver.findElement(By.xpath(FECHAR)).click();
+    }
     }

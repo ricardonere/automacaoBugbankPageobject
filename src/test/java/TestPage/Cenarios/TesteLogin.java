@@ -56,6 +56,7 @@ public class TesteLogin {
         Assert.assertTrue(driver.getPageSource().contains(msg));
 
     }
+
     public void CadastrarUsuario() {
         homePage.registrar();
         homePage.preencherEmail("teste@gmail.com");
@@ -64,6 +65,7 @@ public class TesteLogin {
         homePage.preencheConfirmaSenha("Teste");
         homePage.criarConta();
         homePage.cadastrar();
+        homePage.fechar();
         System.out.println();
 
     }
